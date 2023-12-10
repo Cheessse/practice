@@ -22,3 +22,5 @@ function calcTotalPrice(stones, stonesName) {
 }
 
 console.log(calcTotalPrice(stones, "Сапфір"));
+
+console.dir([]);
