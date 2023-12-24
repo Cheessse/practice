@@ -72,10 +72,10 @@ callAction(item.getQuatity.bind(item));
 // makeDish(dish), яка памятає імя щефа під час її виклику
 // Функція  makeDish має логіровать рядок "<імя шефа> is cooking <dish>"
 
-function makeShef(shefName) {
+/* function makeShef(shefName) {
   return function makeDish(dish) {
     console.log(`${shefName} is cooking ${dish}`);
   };
 }
 const jonCook = makeShef("Jon");
-jonCook("fish cold");
+jonCook("fish cold"); */
