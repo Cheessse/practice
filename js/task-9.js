@@ -34,14 +34,33 @@
 //Передаючи йому створений об'єкт.
 //showProduct(product) - коллбек приймаючий об'єкт
 //продукту і логірующий їх у консоль
-function makeProduct(name, price, callback) {
-  const product = {
-    name,
-    price,
-    id:Math.floor(Math.random() * 100),
+//
+
+//TODO: № 3 на this ✅ ==============================================
+//Виправте помилки, щоб код працював
+// const product = {
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
+// product.showPrice();
+
+// =============================
+//TODO: № 4 на this ✅==============================================
+//Виправте помилки, щоб код працював
+
+function callAction(action) {
+  action();
 }
-  return callback(product);
-}
-const showProduct = product => product;
-console.log(makeProduct("Fish", 100, showProduct))
-console.log(makeProduct("Apple", 300, showProduct))
+
+const item = {
+   
+  getQuatity() {
+   
+    console.log(this.quantity);
+  },
+ quantity: 5,
+};
+
+callAction(item.getQuatity.bind(item));
