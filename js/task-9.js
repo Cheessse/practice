@@ -8,9 +8,9 @@
 
 // function letMeSeeYourName(greet) {
 //   const name = prompt("What is your name?");
-  //   if (!name) {
-  //     alert("Введіть ім'я");
-  //     return;
+//   if (!name) {
+//     alert("Введіть ім'я");
+//     return;
 //   //   }
 //   if (name === "") {
 //     alert("Введіть ім'я");
@@ -50,7 +50,7 @@
 //TODO: № 4 на this ✅==============================================
 //Виправте помилки, щоб код працював
 
-function callAction(action) {
+/* function callAction(action) {
   action();
 }
 
@@ -64,3 +64,18 @@ const item = {
 };
 
 callAction(item.getQuatity.bind(item));
+ */
+/* ======================================================================================= */
+//TODO якщо що на замикання ✅ ==============================================
+
+// Напишіть функцію makeShef(shefName), яка повертає функцію
+// makeDish(dish), яка памятає імя щефа під час її виклику
+// Функція  makeDish має логіровать рядок "<імя шефа> is cooking <dish>"
+
+function makeShef(shefName) {
+  return function makeDish(dish) {
+    console.log(`${shefName} is cooking ${dish}`);
+  };
+}
+const jonCook = makeShef("Jon");
+jonCook("fish cold");
